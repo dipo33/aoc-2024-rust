@@ -1,0 +1,13 @@
+[package]
+name = "aoc-2024-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+dotenvy = "0.15.7"
+paste = "1.0.15"
+aoc_common = { path = "aoc_common" }
+
+[workspace]
+members = [ "aoc_common" ]

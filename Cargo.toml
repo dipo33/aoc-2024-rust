@@ -6,7 +6,6 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.5.20", features = ["derive"] }
 dotenvy = "0.15.7"
-paste = "1.0.15"
 aoc_common = { path = "aoc_common" }
 
 [dev-dependencies]

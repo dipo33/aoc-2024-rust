@@ -1,3 +1,4 @@
+use colored::*;
 use std::fmt::{self, Display};
 
 use crate::input_fetcher;
@@ -36,9 +37,13 @@ where
         .expect(format!("Failed to fetch input for day {:02}", day).as_str());
     let input_lines: Vec<&str> = input.lines().collect();
 
+    println!("{}", format!("Day {:02}", day).bold().blue());
+
     let part1_result = instance.solve_part_1(&input_lines);
-    println!("Day {:02} - Part 1 Result: {}", day, part1_result);
+    println!("  {}: {}", "Part 1 Result".green(), part1_result);
 
     let part2_result = instance.solve_part_2(&input_lines);
-    println!("Day {:02} - Part 2 Result: {}", day, part2_result);
+    println!("  {}: {}", "Part 2 Result".green(), part2_result);
+
+    println!("{}", "-".repeat(30).dimmed());
 }

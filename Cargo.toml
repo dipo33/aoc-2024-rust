@@ -9,5 +9,13 @@ dotenvy = "0.15.7"
 paste = "1.0.15"
 aoc_common = { path = "aoc_common" }
 
+[dev-dependencies]
+criterion = "0.5.1"
+
 [workspace]
 members = [ "aoc_common" ]
+
+[[bench]]
+name = "day_bench"
+harness = false
+

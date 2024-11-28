@@ -17,7 +17,7 @@ pub trait Day: Default {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub struct Placeholder;
 
 impl Display for Placeholder {

@@ -28,10 +28,10 @@ mod tests {
     #[test]
     #[ignore = "not yet implemented"]
     fn test_example_part_1() {
-        let input: &[&str] = &[];
+        let input: Vec<&str> = r#""#.lines().collect();
 
         let day = Day01::default();
-        let part_1 = day.solve_part_1(input);
+        let part_1 = day.solve_part_1(&input);
 
         assert_eq!(part_1, Placeholder)
     }
@@ -39,10 +39,10 @@ mod tests {
     #[test]
     #[ignore = "not yet implemented"]
     fn test_example_part_2() {
-        let input: &[&str] = &[];
+        let input: Vec<&str> = r#""#.lines().collect();
 
         let day = Day01::default();
-        let part_2 = day.solve_part_2(input);
+        let part_2 = day.solve_part_2(&input);
 
         assert_eq!(part_2, Placeholder)
     }

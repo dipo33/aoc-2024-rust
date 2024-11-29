@@ -1,11 +1,11 @@
 use colored::*;
-use std::fmt::{self, Display};
+use std::fmt::{self, Debug, Display};
 
 use crate::input_fetcher;
 
 pub trait Day: Default {
-    type P1: Display;
-    type P2: Display;
+    type P1: Display + Debug + PartialEq;
+    type P2: Display + Debug + PartialEq;
 
     fn solve_part_1(&self, input: &[&str]) -> Self::P1;
 

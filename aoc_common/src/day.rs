@@ -4,8 +4,8 @@ use std::fmt::{self, Debug, Display};
 use crate::input_fetcher;
 
 pub trait Day: Default {
-    type P1: Display + Debug + PartialEq;
-    type P2: Display + Debug + PartialEq;
+    type P1: Display + Default + Debug + PartialEq;
+    type P2: Display + Default + Debug + PartialEq;
 
     fn solve_part_1(&self, input: &[&str]) -> Self::P1;
 
@@ -18,7 +18,7 @@ pub trait Day: Default {
     }
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Default)]
 pub struct Placeholder;
 
 impl Display for Placeholder {

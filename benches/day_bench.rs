@@ -7,8 +7,10 @@ use aoc_2024_rust::days::{
 };
 use aoc_common::{day::Day, input_fetcher};
 use criterion::{criterion_group, criterion_main, Criterion};
+use dotenvy::dotenv;
 
 fn benchmark_day<T: Day + Default>(c: &mut Criterion) {
+    dotenv().ok();
     let day = T::default();
     let day_number = day.get_day();
     let input = input_fetcher::get_or_fetch_input(day_number)

@@ -23,3 +23,7 @@ test = false
 name = "day_bench"
 harness = false
 
+[[bench]]
+name = "random_bench"
+harness = false
+

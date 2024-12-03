@@ -25,7 +25,7 @@ fn benchmark_day<T: Day + Default>(c: &mut Criterion) {
     });
 }
 
-fn benchmark_day1(c: &mut Criterion) {
+fn benchmark_days(c: &mut Criterion) {
     benchmark_day::<Day01>(c);
     benchmark_day::<Day02>(c);
     benchmark_day::<Day03>(c);
@@ -58,5 +58,5 @@ fn benchmark_day1(c: &mut Criterion) {
     benchmark_day::<Day30>(c);
 }
 
-criterion_group!(benches, benchmark_day1);
+criterion_group!(benches, benchmark_days);
 criterion_main!(benches);

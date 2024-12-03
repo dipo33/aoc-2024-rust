@@ -7,9 +7,9 @@ pub trait Day: Default {
     type P1: Display + Default + Debug + PartialEq;
     type P2: Display + Default + Debug + PartialEq;
 
-    fn solve_part_1(&self, input: &[&str]) -> Self::P1;
+    fn solve_part_1(&self, input: &str) -> Self::P1;
 
-    fn solve_part_2(&self, input: &[&str]) -> Self::P2;
+    fn solve_part_2(&self, input: &str) -> Self::P2;
 
     fn get_day(&self) -> u8;
 
@@ -35,14 +35,13 @@ where
     let day = instance.get_day();
     let input = input_fetcher::get_or_fetch_input(day)
         .expect(format!("Failed to fetch input for day {:02}", day).as_str());
-    let input_lines: Vec<&str> = input.lines().collect();
 
     println!("{}", format!("Day {:02}", day).bold().blue());
 
-    let part1_result = instance.solve_part_1(&input_lines);
+    let part1_result = instance.solve_part_1(&input);
     println!("  {}: {}", "Part 1 Result".green(), part1_result);
 
-    let part2_result = instance.solve_part_2(&input_lines);
+    let part2_result = instance.solve_part_2(&input);
     println!("  {}: {}", "Part 2 Result".green(), part2_result);
 
     println!("{}", "-".repeat(30).dimmed());

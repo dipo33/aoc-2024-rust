@@ -15,14 +15,13 @@ fn benchmark_day<T: Day + Default>(c: &mut Criterion) {
     let day_number = day.get_day();
     let input = input_fetcher::get_or_fetch_input(day_number)
         .expect(format!("Failed to fetch input for day {:02}", day_number).as_str());
-    let input_lines: Vec<&str> = input.lines().collect();
 
     c.bench_function(&format!("Day {:02} - Part 1", day.get_day()), |b| {
-        b.iter(|| day.solve_part_1(&input_lines))
+        b.iter(|| day.solve_part_1(&input))
     });
 
     c.bench_function(&format!("Day {:02} - Part 2", day.get_day()), |b| {
-        b.iter(|| day.solve_part_2(&input_lines))
+        b.iter(|| day.solve_part_2(&input))
     });
 }
 

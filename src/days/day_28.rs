@@ -7,11 +7,11 @@ impl Day for Day28 {
     type P1 = Placeholder;
     type P2 = Placeholder;
 
-    fn solve_part_1(&self, _input: &[&str]) -> Self::P1 {
+    fn solve_part_1(&self, _input: &str) -> Self::P1 {
         Placeholder
     }
 
-    fn solve_part_2(&self, _input: &[&str]) -> Self::P2 {
+    fn solve_part_2(&self, _input: &str) -> Self::P2 {
         Placeholder
     }
 
@@ -28,7 +28,7 @@ mod tests {
     #[test]
     #[ignore = "not yet implemented"]
     fn test_example_part_1() {
-        let input: Vec<&str> = r#""#.lines().collect();
+        let input = r#""#;
 
         let day = Day28::default();
         let part_1 = day.solve_part_1(&input);
@@ -39,7 +39,7 @@ mod tests {
     #[test]
     #[ignore = "not yet implemented"]
     fn test_example_part_2() {
-        let input: Vec<&str> = r#""#.lines().collect();
+        let input = r#""#;
 
         let day = Day28::default();
         let part_2 = day.solve_part_2(&input);

@@ -34,7 +34,7 @@ where
     let instance = DAY::default();
     let day = instance.get_day();
     let input = input_fetcher::get_or_fetch_input(day)
-        .expect(format!("Failed to fetch input for day {:02}", day).as_str());
+        .unwrap_or_else(|_| panic!("Failed to fetch input for day {:02}", day));
 
     println!("{}", format!("Day {:02}", day).bold().blue());
 
